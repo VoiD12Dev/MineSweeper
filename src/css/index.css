@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+  background-color: #ffffff;
+}
+
+header{
+  font-family: 'Honk', system-ui;
+  margin: auto;
+  width: 60vw;
+  display:flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+h1{
+  font-size: 4em;
+}
+
+main{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar{
+  margin-top: 2vh;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 1.3em;
+}
+
+.nav-link:hover {
+  color: red !important;
+}
+
+.imageHeader{
+  width: 80px;
+  height: 80px;
+}
+
+.imgbackground {
+  background-image: url("../assets/Mine.jpg");
+  background-size: 50px 50px;
+  z-index: -1;
+  position: fixed;
+  inset: 0;
+  opacity: 0.1;
+  background-repeat: repeat;
+  height: 100%;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-board .row {
+  display: flex;
+}
+
+.game-board .cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Add shadow */
+  background-color: #000097; /* Change background color */
+  border-radius: 5px; /* Add rounded corners */
+  transition: all 0.3s ease; /* Add transition for hover effect */
+  z-index: 10;
+}
+
+.cell:hover {
+  background-color: #03e2ff;
+}
+
+.game-board .cell.defused {
+  background-color: #ddd;
+}
+
+.cell:active {
+  box-shadow: none;
+  transform: translate(
+    1px,
+    1px
+  );
+}
+
+.game-over {
+  color: red;
+  font-size: 24px;
+  text-align: center;
+}
+
+.mine-counter{
+  background-color: #ffffff;
+}
+
+.cell.marked {
+  background-color: yellow !important;
+}
+
+.exploded {
+  background-color: red !important;
+}
+
+.show-mine {
+  background-color: red !important;
+}
+
+.expDificultades {
+  background-color: #ffffff;
+  text-align: center;
+  height: 5vh;
+}
+
+.expJuego {
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  background-color: #ffffff;
+  height: 5vh;
+  justify-content: center;
+}
+
+h3{
+  font-weight: bolder;
+}
+
+.botonDificultad{
+  font-family: 'Pixelify Sans', sans-serif !important;
+}
+
+@media (max-width: 768px) {
+  .board-container.board-level-0 {
+    min-width: 200px;
+  }
+
+  .board-container.board-level-1 {
+    min-width: 800px;
+  }
+
+  .board-container.board-level-2 {
+    min-width: 1100px;
+  }
+}
+
+.imagenExplicativa{
+    width: 150px;
+    height: 150px;
+}
+
+.contornoImagen{
+    border: 2px solid #000097;
+    border-radius: 10px;
+}
